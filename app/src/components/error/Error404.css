@@ -1,0 +1,9 @@
+.Error404 {
+  font-size: 2rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}

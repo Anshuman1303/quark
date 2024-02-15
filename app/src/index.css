@@ -1,0 +1,198 @@
+/* <> CSS RESET */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+:where(input, button, textarea) {
+  font: inherit;
+  color: inherit;
+}
+:where(button) {
+  cursor: pointer;
+}
+:where(img) {
+  display: block;
+  max-width: 100%;
+  max-height: auto;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+:where(a, a:hover, a:focus, a:visited) {
+  text-decoration: none;
+  color: unset;
+}
+/* </> */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&family=Roboto&display=swap");
+/* <> VARIABLES */
+
+:root {
+  /* FONTS */
+  --regular: 400 1rem "Roboto", "sans-serif";
+  --heading: "Montserrat", "sans-serif";
+  /* COLORS */
+  --bg: #121212;
+  --bg2: #1c1c1c;
+  --bg3: #333;
+  --bg3H: #444;
+  --fg: #fff;
+  --fg2: #ddd;
+  --fg3: #ccc;
+  --fglight: #aaa;
+  --fg4: #666;
+  --pc: #0f7bff;
+  --pcbg: #0050d0;
+  --H: #ffffff25;
+  --red: #ff8080;
+  --green: #80ff80;
+  /* BORDERS */
+  --border: 1px solid #444;
+  --border-red: 1px solid var(--red);
+  --border-green: 1px solid var(--green);
+  --border-2px-pc: 2px solid var(--pc);
+  --border-2px-transparent: 2px solid transparent;
+  --border-2px-fglight: 2px solid var(--fglight);
+  --border-2px-bg3H: 2px solid var(--bg3H);
+  --border-2px-bg3: 2px solid var(--bg3);
+  --border-2px-fg4: 2px solid var(--fg4);
+  /* STANDARD PADDING */
+
+  /* STANDARD MARGIN */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* COLORS */
+  }
+}
+/* </> */
+
+/* <> UTILITY CLASS */
+.rotate {
+  animation: rotate 2000ms linear infinite forwards;
+  -webkit-animation: rotate 2000ms linear infinite forwards;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+.nowrap {
+  white-space: nowrap;
+}
+.underline {
+  text-decoration: underline;
+}
+.link--hover {
+  color: var(--fglight);
+  transition: color 150ms ease-in-out;
+  -webkit-transition: color 150ms ease-in-out;
+  -moz-transition: color 150ms ease-in-out;
+  -ms-transition: color 150ms ease-in-out;
+  -o-transition: color 150ms ease-in-out;
+}
+.link--hover:hover {
+  color: var(--fg2);
+}
+.link {
+  position: relative;
+  transition: color 150ms ease-in-out;
+  -webkit-transition: color 150ms ease-in-out;
+  -moz-transition: color 150ms ease-in-out;
+  -ms-transition: color 150ms ease-in-out;
+  -o-transition: color 150ms ease-in-out;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: var(--fg);
+  bottom: 0;
+  left: 0;
+  transform: scaleX(1);
+  transition: background 150ms ease-in-out, transform 150ms ease-in-out;
+  -webkit-transition: background 150ms ease-in-out, transform 150ms ease-in-out;
+  -moz-transition: background 150ms ease-in-out, transform 150ms ease-in-out;
+  -ms-transition: background 150ms ease-in-out, transform 150ms ease-in-out;
+  -o-transition: background 150ms ease-in-out, transform 150ms ease-in-out;
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+}
+.link:hover {
+  color: var(--pc);
+}
+.link:hover::after {
+  background: var(--pc);
+  transform: scaleX(1.1);
+  -webkit-transform: scaleX(1.1);
+  -moz-transform: scaleX(1.1);
+  -ms-transform: scaleX(1.1);
+  -o-transform: scaleX(1.1);
+}
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fade-in 350ms ease-in-out 0s 1 normal forwards;
+  animation: fade-in 350ms ease-in-out 0s 1 normal forwards;
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+/* </> */
+
+/* <> GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: var(--fg);
+  font: var(--regular);
+}
+h1 {
+  font: 800 2.5em var(--heading);
+  color: var(--pc);
+}
+h2 {
+  font: 600 2em var(--heading);
+}
+h3 {
+  font: 400 1.7em var(--heading);
+}
+#root {
+  background: var(--bg);
+  width: 100%;
+  height: 100vh;
+}
+/* </> */

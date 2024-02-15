@@ -1,0 +1,7 @@
+.app {
+  background: var(--bg);
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(300px, 2fr) 5fr;
+}

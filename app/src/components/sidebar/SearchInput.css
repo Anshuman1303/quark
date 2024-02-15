@@ -1,0 +1,46 @@
+.search-wrap {
+  padding: 0 0.3rem;
+  margin: 0.5rem 0;
+  background: var(--bg3);
+  border: var(--border);
+  border-bottom: var(--border-2px-fglight);
+  height: 2rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  transition: background 100ms ease-out, color 100ms ease-out, border 100ms ease-out;
+  -webkit-transition: background 100ms ease-out, color 100ms ease-out, border 100ms ease-out;
+  -moz-transition: background 100ms ease-out, color 100ms ease-out, border 100ms ease-out;
+  -ms-transition: background 100ms ease-out, color 100ms ease-out, border 100ms ease-out;
+  -o-transition: background 100ms ease-out, color 100ms ease-out, border 100ms ease-out;
+  color: var(--fglight);
+}
+.search-wrap:hover {
+  background: var(--bg3H);
+}
+.search-wrap:focus-within {
+  background: var(--bg);
+  border-bottom: var(--border-2px-pc);
+  color: var(--fg2);
+}
+label[for="searchChats"] {
+  display: flex;
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+}
+.search {
+  background: transparent;
+  border: none;
+  height: 100%;
+  flex-grow: 1;
+}
+.search::placeholder {
+  color: var(--fglight);
+}
+.search:focus {
+  outline: none;
+}

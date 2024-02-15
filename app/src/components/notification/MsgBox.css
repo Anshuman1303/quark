@@ -1,0 +1,25 @@
+.msg-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  gap: 0.2em;
+  text-transform: uppercase;
+  font: 100 1em var(--heading);
+  background: var(--bg3);
+  padding: 0.4em;
+  border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+.pass-box {
+  border: var(--border-green);
+  color: var(--green);
+}
+.err-box {
+  border: var(--border-red);
+  color: var(--red);
+}

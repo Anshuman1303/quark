@@ -1,0 +1,19 @@
+.form {
+  font-size: 1.3em;
+  background: var(--bg2);
+  padding: 2.5em 2.5em 1.5em 2.5em;
+  display: flex;
+  text-align: center;
+  align-items: stretch;
+  justify-content: center;
+  flex-flow: column nowrap;
+  min-width: 25%;
+  width: max-content;
+  max-width: 80%;
+  border: var(--border);
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+}

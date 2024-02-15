@@ -1,0 +1,58 @@
+.chat-main {
+  background: var(--bg);
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 20fr max(6vh, 25px);
+}
+.chats {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  gap: 0.2em;
+  padding: 1.5em;
+  overflow-y: auto;
+  height: 100%;
+}
+.chat-main .date {
+  font-size: 0.9em;
+  align-self: center;
+  margin: 1em 0;
+  background: var(--bg3);
+  color: var(--fg2);
+  padding: 0.5em 0.5em;
+  border: var(--border);
+  border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+}
+.chat-main .msg {
+  max-width: 70%;
+  padding: 0.5em 1em;
+  border-radius: 0.7em;
+  -webkit-border-radius: 0.7em;
+  -moz-border-radius: 0.7em;
+  -ms-border-radius: 0.7em;
+  -o-border-radius: 0.7em;
+  white-space: pre-line;
+  overflow-wrap: break-word;
+}
+.chat-main .msg .time {
+  text-wrap: nowrap;
+  float: right;
+  font-size: 0.75em;
+  color: var(--fg2);
+  margin: 0.5em 0 0 0.5em;
+  bottom: 0;
+}
+.chat-main .msg.sent {
+  background: var(--pcbg);
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+.chat-main .msg.received {
+  background: var(--bg3);
+  border-bottom-left-radius: 0;
+  align-self: flex-start;
+}

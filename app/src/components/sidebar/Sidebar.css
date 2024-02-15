@@ -1,0 +1,71 @@
+.sidebar {
+  background: var(--bg2);
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-right: var(--border);
+  display: grid;
+  position: relative;
+  grid-template-columns: 3rem 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "sidemenu header"
+    "sidemenu main"
+    "sidemenu main";
+}
+.sidebar__main {
+  overflow-y: auto;
+  font-size: 1.5em;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5em;
+  padding: 0.5em;
+  height: 100%;
+}
+.sidebar__main > li {
+  padding: 0 1em 0 0.2em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 10vh;
+  list-style: none;
+  gap: 0.1em;
+  transition: background 100ms ease-out;
+  -webkit-transition: background 100ms ease-out;
+  -moz-transition: background 100ms ease-out;
+  -ms-transition: background 100ms ease-out;
+  -o-transition: background 100ms ease-out;
+  border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  font-family: var(--heading);
+  font-weight: 400;
+}
+.sidebar__main > li > * {
+  pointer-events: none;
+}
+.sidebar__main .icon {
+  font-size: 2em;
+}
+.sidebar__main > li.active {
+  background: var(--bg3);
+}
+.sidebar__main > li:hover {
+  background: var(--bg3H);
+}
+.sidebar__main > .settings-button {
+  padding: 0.5em;
+  background: var(--bg3);
+  transition: background 150ms ease-in-out;
+  -webkit-transition: background 150ms ease-in-out;
+  -moz-transition: background 150ms ease-in-out;
+  -ms-transition: background 150ms ease-in-out;
+  -o-transition: background 150ms ease-in-out;
+  border: var(--border-red);
+}
+.sidebar__main > .settings-button:hover {
+  background: var(--bg3H);
+}

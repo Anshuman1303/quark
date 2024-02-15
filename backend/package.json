@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend for quark",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon && snyk test",
+    "get": "npm run build --prefix ../app && npm run get:copy",
+    "get:copy": "rm -r ./public && cp -r ../app/build ./public"
+  },
+  "author": "Anshuman Garg",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.3",
+    "snyk": "^1.1272.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "crystals-kyber": "^5.1.0",
+    "date-fns": "^3.3.1",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "express-mysql-session": "^3.0.0",
+    "express-rate-limit": "^7.1.5",
+    "express-session": "^1.18.0",
+    "helmet": "^7.1.0",
+    "mysql2": "^3.7.1",
+    "uuid": "^9.0.1",
+    "validator": "^13.11.0"
+  }
+}

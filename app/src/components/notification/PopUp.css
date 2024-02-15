@@ -1,0 +1,46 @@
+.pop-up {
+  position: absolute;
+  justify-self: center;
+  top: 5vh;
+  font-size: 1.2em;
+}
+.pop-up .x {
+  cursor: pointer;
+  color: var(--fg3);
+  transition: color 150ms ease-in-out;
+  -webkit-transition: color 150ms ease-in-out;
+  -moz-transition: color 150ms ease-in-out;
+  -ms-transition: color 150ms ease-in-out;
+  -o-transition: color 150ms ease-in-out;
+}
+.pop-up .x:hover {
+  color: var(--red);
+}
+.pop-up.appear {
+  animation: appear 1s ease-in;
+  -webkit-animation: appear 300ms ease-in;
+}
+.pop-up.disappear {
+  animation: disappear 300ms ease-in forwards;
+  -webkit-animation: disappear 300ms ease-in forwards;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+  }
+}
+@keyframes disappear {
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+  }
+}

@@ -1,0 +1,14 @@
+.sidebar__sidemenu {
+  grid-area: sidemenu;
+  background: var(--bg);
+  padding: 1.5rem 0;
+  gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  border-radius: 0 -20px -20px 0;
+  -webkit-border-radius: 0 -20px -20px 0;
+  -moz-border-radius: 0 -20px -20px 0;
+  -ms-border-radius: 0 -20px -20px 0;
+  -o-border-radius: 0 -20px -20px 0;
+}
